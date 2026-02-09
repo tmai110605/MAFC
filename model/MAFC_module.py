@@ -77,7 +77,7 @@ class ChannelPool(nn.Module):
         return spa_all
 class SpatialGate_new1(nn.Module):
     def __init__(self, gate_channel, reduction_ratio=8):
-        super(SpatialGate_new1_NoBN, self).__init__()
+        super(SpatialGate_new1, self).__init__()
         cout = gate_channel // reduction_ratio
         self.gate_s = nn.Sequential()
         self.gate_s.add_module('gate_s_conv_reduce0', nn.Conv2d(gate_channel, cout, kernel_size=1))
